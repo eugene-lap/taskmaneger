@@ -1,0 +1,64 @@
+.card-header{
+    width: 100%;
+    position: relative;
+    &__img{
+        position: absolute;
+        bottom: 3.39px;
+        right: 53.54px;
+    }
+}
+.card-header-container{
+    margin-top: 5.87rem;
+    background-color: #FCFBFF;
+    border-radius: 16.95px;
+    padding: 25.5px 29.7px;
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 33px;
+        margin: 0;
+        color: #27104e;
+    }
+    &__text{
+        margin-top: 0.95rem;
+        font-family: var(--font-family);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 15px;
+        color: #27104e
+    }
+    &__button{
+        margin-top: 8.45px;
+    }
+}
+
+.window-task-card-header{
+    max-width: 747px;
+    position: relative;
+    &__img{
+        position: absolute;
+        bottom: 3.39px;
+        right: 53.54px;
+    }
+}
+.window-task-card-header-container{
+    margin-top: 5.87rem;
+    background-color: #FCFBFF;
+    border-radius: 16.95px;
+    padding: 23.76px 45.04px 72.25px 45.04px;
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 31px;
+        color: #27104e;
+        margin: 0;
+    }
+    &__text{
+        margin-top: 0.95rem;
+        font-family: var(--font-family);
+        font-style: italic;
+        font-weight: 400;
+        font-size: 13px;
+        color: #27104e;
+    }
+}

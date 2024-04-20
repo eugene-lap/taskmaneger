@@ -1,0 +1,38 @@
+.calendar{
+  border-radius: 16px;
+  background-color: #f5f2ff;
+  border: 1.27px solid #27104E;
+  width: 100%;
+}
+.calendar-month{
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  color: #27104e;
+  padding-left: 1rem;
+}
+.calendar-day{
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 17px;
+  padding: 8px;
+  text-align: center;
+  color: #27104e;
+  &__today{
+    background: #9854cb;
+    border-radius: 8px;
+    padding: 8px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 17px;
+    text-align: center;
+    color: #f5f2ff;
+  }
+}  
+.calendar-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}

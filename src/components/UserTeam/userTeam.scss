@@ -1,0 +1,27 @@
+.user-team{
+    border-radius: 17px;
+    width: 30.176%;
+    padding: 14.54px 19px;
+    background-color: #FCFBFF;
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 16px;
+        margin: 0;
+        text-align: center;
+        color: #27104e;
+    }
+}
+.user-team-container{
+    margin-top: 7.76px;
+    max-height: 149.12px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 8.47px;
+}
+.user-team-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 12.82px;
+}

@@ -1,0 +1,14 @@
+.chart-container{
+    border-radius: 17px;
+    width: 66.738%;
+    height: 244px;
+    padding: 20px;  
+    padding-right: 30px;
+    background: #fcfbff;
+    &__text{
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 16px;
+        color: #27104e;    
+    }
+}
