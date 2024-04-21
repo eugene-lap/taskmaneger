@@ -1,9 +1,13 @@
 import { Button } from '../Button'
 import { ProgressLine } from '../ProgressLine'
 import './task.scss'
-export const Task = () => {
+export const Task = ({width} : {width?: string}) => {
     return (
-        <div className="task">
+        <div className="task"
+        style={
+            {width: `${width}%`}
+        }
+        >
             <h4 className="task__date">Янв. 2, 2022</h4>
             <div className="task-container">
                 <h2 className="task-container__title">Web Dashboard</h2>

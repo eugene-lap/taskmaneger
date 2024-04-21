@@ -1,0 +1,17 @@
+.main-header-tools__search-input {
+    border: none;
+    width: 40%;
+    outline: none;
+    &:-webkit-autofill {
+      transition: all 5000s ease-in-out 0s;
+    }
+  }
+.main-header-tools__search-form {
+    background-color: #fff;
+    width: 6rem;
+    padding: 8px 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }

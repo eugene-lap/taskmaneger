@@ -1,0 +1,27 @@
+.user-task-page{
+    width: 86.17%;
+}
+.user-task-page-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 1rem;
+}
+.user-task-page-header-container{
+    width: 67.72%;
+}
+.user-task-page-header-container-buttons{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.user-task-page-container{
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.user-task-page-pagination{
+    padding-top: 1rem;
+}

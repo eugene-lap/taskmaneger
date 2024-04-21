@@ -1,0 +1,29 @@
+.pagination {
+  padding: 1rem 0;
+  max-width: 31.2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  &__el {
+    transition: 0.2s;
+    font-size: 17px;
+    color: #333333;
+    background-color: #FFFFFF;
+    border-radius: 13px;
+    border: none;
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    &:disabled path {
+      fill: grey;
+    }
+  }
+}
+.pagination-container {
+  display: flex;
+  gap: 16px;
+}
+.active {
+  color: #FFFFFF;
+  background-color: #2F80ED;
+}

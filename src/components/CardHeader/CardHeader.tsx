@@ -22,7 +22,7 @@ export const CardHeader = () => {
             </div>
         </div> : <div className="window-task-card-header">
             <div className="window-task-card-header__img">
-            {status === 'current' ?  <AllTaskImag/> : status === 'all' ? <AllTaskImag/> : <CompletedTaskImage/>}
+            {status === 'current' ?  <CurrentTaskImage/> : status === 'all' ? <AllTaskImag/> : <CompletedTaskImage/>}
             </div>
             <div className="window-task-card-header-container">
                 <h2 className="window-task-card-header-container__title">{tittleCard(status)}</h2>
