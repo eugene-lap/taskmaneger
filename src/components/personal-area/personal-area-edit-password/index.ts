@@ -1,0 +1,1 @@
+export { PersonalAreaPassword } from './personal-area-edit-password'

@@ -1,0 +1,42 @@
+.statistic-item {
+  background-color: #fcfbff;
+  height: 53px;
+  width: 300px;
+  display: flex;
+  gap: 13px;
+
+  .statistic-item-icon {
+    border-radius: 10px;
+    width: 53px;
+    height: 53px;
+    background: #f1eef6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  .statistic-item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      color: #757575;
+    }
+    &__info {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: #000;
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+.avatar-user {
+  border-radius: 10px;
+  background: #fcfbff;
+  width: 349px;
+  height: 110px;
+  padding: 11px 16px;
+  display: flex;
+  gap: 20px;
+
+  &__photo {
+    border-radius: 100%;
+    width: 89px;
+    height: 89px;
+  }
+
+  &__name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2b2c30;
+  }
+
+  &__details {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #2b2c30;
+  }
+}

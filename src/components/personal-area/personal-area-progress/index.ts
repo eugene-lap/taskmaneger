@@ -1,0 +1,1 @@
+export { PersonalAreaProgress } from './personal-area-progress'

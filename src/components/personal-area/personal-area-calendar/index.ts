@@ -1,0 +1,1 @@
+export { PersonalAreaTeam } from './personal-area-team'

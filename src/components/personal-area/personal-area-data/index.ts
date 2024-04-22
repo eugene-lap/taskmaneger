@@ -1,0 +1,1 @@
+export { PersonalAreaData } from './personal-area-data'

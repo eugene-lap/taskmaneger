@@ -12,3 +12,17 @@ export type User = {
   name: string;
   position: string;
 }
+
+export type UserStatistic = {
+  allTime: number;
+  closedTasks: number;
+  developedTasks: number;
+  recyclingTime: number;
+  lateness: number;
+}
+
+export type StatisticItemType = {
+  icon: string;
+  title: string;
+  info: string;
+}
