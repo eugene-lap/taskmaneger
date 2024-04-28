@@ -1,12 +1,15 @@
-import { IStoreState, ITasksState } from "../../types";
+import { ITasksState } from "../../types";
 import {
+  DELETE_FILES,
   SET_COUNT_OF_PAGES,
   SET_CURRENT_PAGE,
+  SET_FILES,
 } from "../action-types";
 
-const initialState = {
+const initialState : ITasksState = {
   currentPage: 1,
   countOfPages: 20,
+  files: []
 };
 
 const getInitialState = () => {
@@ -35,6 +38,19 @@ const tasksReducer = (state = getInitialState(), action: any) => {
         countOfPages,
       };
     }
+    case SET_FILES: {
+      const { files } = action;
+      return {
+        files: [...state.files,
+          ...files
+        ]
+      };
+    }
+    case DELETE_FILES:
+        return {
+          ...state,
+          files: [] 
+        };
     default: {
       return state;
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigation } from './components/Navigation/Navigation';
 import './App.scss'
-import { UserMainPage, UserTaskPage } from './pages/UserPages';
+import { UserActiveTaskPage, UserMainPage, UserTaskPage } from './pages/UserPages';
 import { useSelector } from 'react-redux';
 import { IStoreState } from './types';
 
@@ -12,6 +12,7 @@ function App() {
       <Navigation/>
       {links === 'mainWindow' && <UserMainPage/>}
       {links === 'taskWindow' && <UserTaskPage/>}
+      {links === 'chatWindow' && <UserActiveTaskPage/>}
     </div>
   );
 }

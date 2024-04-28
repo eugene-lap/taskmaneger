@@ -1,2 +1,4 @@
 export const SET_COUNT_OF_PAGES = "SET_COUNT_OF_PAGES";
 export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
+export const SET_FILES = "SET_FILES";
+export const DELETE_FILES = "DELETE_FILES"

@@ -1,0 +1,18 @@
+.report-card{
+
+    &__date{
+        font-family: var(--third-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #8d8e97;
+    }
+
+    &__text{
+        font-family: var(--third-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 156%;
+        color: #313037;
+    }
+}

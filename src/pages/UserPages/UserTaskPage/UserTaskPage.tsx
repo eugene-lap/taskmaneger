@@ -13,7 +13,9 @@ export const UserTaskPage = () => {
                 </div>
                 <CardHeader/>
                 </div>
+                <div className="user-task-page-header-tabs">
                 <UserTabs/>
+                </div>
             </div>
             <div className="user-task-page-container">
                 <Task width='22' />

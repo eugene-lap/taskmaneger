@@ -8,3 +8,44 @@
         border-radius: 8px;
     }
 }
+
+
+.line-progress{
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: #FCFBFF;
+}
+.line-progress-container{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20.06px;
+    &__title{
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 24px;
+        margin: 0;
+        color: #27104e;
+    }
+}
+.line-progress-container-blok{
+    display: flex;
+    justify-content: end;
+    &__progress{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #27104e;
+    }
+}
+.line-progress-blok{
+    margin-top: 9.28px;
+    &__line{
+        border: 1.92px solid rgba(217, 217, 217, 0.5);
+        height: 0px;
+    }
+}
+.line-progress-blok-container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+}

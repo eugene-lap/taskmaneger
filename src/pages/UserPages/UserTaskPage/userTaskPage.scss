@@ -1,11 +1,13 @@
 .user-task-page{
-    width: 86.17%;
+    width: 90%;
 }
 .user-task-page-header{
     display: flex;
     justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 .user-task-page-header-container{
     width: 67.72%;
@@ -24,4 +26,9 @@
 }
 .user-task-page-pagination{
     padding-top: 1rem;
+}
+.user-task-page-header-tabs{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1rem;
 }

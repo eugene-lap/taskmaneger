@@ -1,9 +1,11 @@
 import { IStoreState, IUiState } from "../../types";
-import { SET_LINKS_STAtUS, SET_TASK_STATUS } from "../action-types";
+import { SET_LINKS_STAtUS, SET_TASK_ACTIVE_STATUS, SET_TASK_STATUS, SET_WIDTH_BLOCK } from "../action-types";
 
 const initialState: IUiState = {
   linksStatus: "taskWindow",
-  taskStatus: "completed"
+  taskStatus: "completed",
+  taskActiveStatus: "description",
+  widthBlock: 0
 };
 
 const getInitialState = () => {
@@ -29,6 +31,18 @@ const uiReducer = (state = getInitialState(), action: any) => {
         return {
           ...state,
           taskStatus,
+        };
+        case SET_TASK_ACTIVE_STATUS:
+        const { taskActiveStatus } = action;
+        return {
+          ...state,
+          taskActiveStatus,
+        };
+        case SET_WIDTH_BLOCK:
+        const { widthBlock } = action;
+        return {
+          ...state,
+          widthBlock,
         };
       default: {
         return state;
