@@ -3,10 +3,11 @@ import createSagaMiddleware from "redux-saga";
 import { all } from "redux-saga/effects";
 import { tasksReducer, uiReducer} from "./reducers";
 import { IStoreState } from '../types';
+import { watcherTask } from './action-creators';
 
 const sagaMiddleware = createSagaMiddleware();
 function* rootSaga() {
-  yield all([]);
+  yield all([watcherTask()]);
 }
 
 const store = createStore(

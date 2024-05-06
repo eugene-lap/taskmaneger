@@ -1,15 +1,15 @@
-import { ITasksState } from "../../types";
+import { IImgs, ITasksState } from "../../types";
 import {
-  DELETE_FILES,
+  DELETE_IMGS,
   SET_COUNT_OF_PAGES,
   SET_CURRENT_PAGE,
-  SET_FILES,
+  SET_IMGS,
 } from "../action-types";
 
 const initialState : ITasksState = {
   currentPage: 1,
   countOfPages: 20,
-  files: []
+  imgs: []
 };
 
 const getInitialState = () => {
@@ -38,18 +38,21 @@ const tasksReducer = (state = getInitialState(), action: any) => {
         countOfPages,
       };
     }
-    case SET_FILES: {
-      const { files } = action;
+    case SET_IMGS: {
+      const { imgs } = action;
+      const OldImgsArr = []
+      const OldImgs : IImgs[] = state.imgs
+      OldImgsArr.push(imgs)
+      const newImgs = OldImgsArr.filter(newImg => !OldImgs.some(oldImg => oldImg.nameImgs === newImg.nameImgs))
       return {
-        files: [...state.files,
-          ...files
-        ]
-      };
+        ...state,
+        imgs: state.imgs.concat(newImgs),
+      };    
     }
-    case DELETE_FILES:
-        return {
+      case DELETE_IMGS:
+        return{
           ...state,
-          files: [] 
+          imgs: []
         };
     default: {
       return state;

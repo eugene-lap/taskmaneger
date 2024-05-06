@@ -14,11 +14,20 @@ export  interface IUiState {
 export interface ITasksState {
   currentPage: number;
   countOfPages: number;
-  files: IFile[];
+  imgs: IImgs[];
 }
 
 export interface IFile {
   name: string,
   size: number,
   type: string,
+}
+
+export interface IImgs{
+  urlImgs: string,
+  nameImgs: string,
+  textImgs?: string,
+  timeAdd?: Date,
+  tasks?: number,
+  users?: number
 }
