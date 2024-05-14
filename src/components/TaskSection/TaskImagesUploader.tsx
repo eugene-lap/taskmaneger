@@ -8,17 +8,21 @@ import { Dropzone, FileMosaic } from "@files-ui/react";
 import { Uploader } from "uploader"; // Installed by "react-uploader".
 import { UploadButton } from "react-uploader";
 import { UploadDropzone } from "react-uploader";
+import { Modal } from '../Modal';
 const uploader = Uploader({
   apiKey: "free"
 });
-const options = { multi: true };
-interface TaskImagesUploaderProps {
-  onSave: (formData: FormData) => void; // Передаем FormData вместо File
-}
+const options = { 
+  multi: true,
+  maxFileCount: 3,
+ };
 
 export const TaskImagesUploader = () => {
   const dispatch = useDispatch();
   const imgs = useSelector((state: IStoreState) => state.tasks.imgs);
+  const tasks = useSelector((state: IStoreState) => state.tasks.task.id)
+  const users = useSelector((state: IStoreState) => state.user.user.id)
+  const isModal = useSelector((state: IStoreState) => state.ui.modalInfo.showModal)
   const [inputValue, setInputValue] = useState<string>('');
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,31 +31,38 @@ export const TaskImagesUploader = () => {
 
   const handleSendClick = () => {
     const currentTime = new Date();
-    const tasks = 333; // Пример id задачи
-    const senderLastName = 1111; // Пример фамилии отправителя
-
     const updatedArray = imgs.map(obj => ({
       ...obj,
       textImgs: inputValue,
       timeAdd: currentTime,
       tasks,
-      users: senderLastName
+      users
     }));
-    console.log(updatedArray)
-    dispatch(addImgs(updatedArray))
-    dispatch(deleteImgs())
-    setInputValue("")
-  };
+    if(updatedArray.length !==0){
+      dispatch(addImgs(updatedArray))
+      dispatch(deleteImgs())
+      setInputValue("")
+    }
+    const targetButton = document.querySelectorAll('.uploader__submitted-file__action');
+
+    targetButton.forEach((link) => { 
+      link.dispatchEvent(new Event('click', { bubbles: true, cancelable: true }));
+  });
+  }
 
 
   return (
     <div className="task-images-uploader">
+      {isModal && <Modal/>}
       <div className="task-images-uploader-save">
         <div className="task-images-uploader-save-buttons">
           <h3 className="task-images-uploader-save-buttons__title">Загрузите файл</h3>
           <UploadButton  uploader={uploader}
                 options={options}
-                onComplete={files => (files.map(x => x.fileUrl).join("\n"))}>
+                onComplete={files => (files.map(x =>  dispatch(setImgs({
+                  nameImgs: String(x.originalFile.originalFileName),
+                  urlImgs: String(x.fileUrl)
+                }))))}>
           {({onClick}) =>
           <button className='task-images-uploader-save-buttons__file' onClick={onClick}>
                   Выбрать файлы

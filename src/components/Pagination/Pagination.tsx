@@ -9,7 +9,7 @@ export const Pagination = () => {
   const dispatch = useDispatch();
   const currentPage = useSelector((state: IStoreState) => state.tasks.currentPage
   );
-  const countOfPages: number = useSelector((state: IStoreState) => state.tasks.countOfPages
+  const countOfPages: number = useSelector((state: IStoreState) => state.tasks.previewTask.countOfPages
   );
   const pages: number[] = [];
   for (let i = 1; i <= countOfPages; i++) {
@@ -19,7 +19,6 @@ export const Pagination = () => {
   useEffect(() => {
     dispatch(setCurrentPage(1));
   }, []);
-console.log(currentPage)
   const pageNumberLimit = 6;
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(6);
   const [minPageNumberLimit, setMinPageNumberLimit] = useState(1);

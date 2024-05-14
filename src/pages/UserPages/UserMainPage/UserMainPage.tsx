@@ -7,9 +7,9 @@ export const UserMainPage = () => {
                 <div className="user-main-page-content">
                     <CardHeader/>
                     <div className="user-main-page-content-tasks">
+                        {/* <Task/>
                         <Task/>
-                        <Task/>
-                        <Task/>
+                        <Task/> */}
                     </div>
                     <div className="user-main-page-content-container">
                         <ChartContainer/>

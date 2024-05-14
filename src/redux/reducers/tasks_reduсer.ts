@@ -1,15 +1,21 @@
-import { IImgs, ITasksState } from "../../types";
+import { IImgs, ITask, ITaskPreview, ITasksState } from "../../types";
 import {
   DELETE_IMGS,
   SET_COUNT_OF_PAGES,
   SET_CURRENT_PAGE,
   SET_IMGS,
+  SET_PREVIEW_TASK,
+  SET_TASK,
+  SET_IMAGES_TASK,
 } from "../action-types";
 
 const initialState : ITasksState = {
   currentPage: 1,
   countOfPages: 20,
-  imgs: []
+  imgs: [],
+  previewTask: {} as ITaskPreview,
+  task: {} as ITask,
+  imagesTask: []
 };
 
 const getInitialState = () => {
@@ -54,6 +60,24 @@ const tasksReducer = (state = getInitialState(), action: any) => {
           ...state,
           imgs: []
         };
+        case SET_PREVIEW_TASK:
+          const {previewTask} = action;
+        return{
+          ...state,
+          previewTask
+        };
+        case SET_TASK:
+          const {task} = action;
+          return{
+            ...state,
+            task
+          }
+        case SET_IMAGES_TASK:
+          const { imagesTask } = action;
+          return {
+            ...state,
+            imagesTask,
+          };  
     default: {
       return state;
     }

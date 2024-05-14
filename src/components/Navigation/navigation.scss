@@ -1,11 +1,12 @@
 .navigation{
+    position: fixed;
     display: flex;
     flex-direction: column;
     background-color: #FCFBFF;
     padding-top: 2.2rem;
-    gap: 5.5rem;
     width: 7.92rem;
     align-items: center;
+    justify-content: space-around;
     border-radius: 16.95px;
     height: 100vh;
     overflow: hidden;
@@ -41,4 +42,15 @@
         flex-direction: column;
         justify-content: center;
     }
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+    align-items: center;
+}
+
+.nav-exit{
+    padding-bottom: 2rem;
 }

@@ -8,6 +8,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   // overflow: hidden;
 }
+button:active {
+  background-color: #f2f2f2;
+  border-color: #ccc;
+  color: #333;
+}
+button{
+  cursor: pointer;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

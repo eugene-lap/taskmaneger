@@ -1,0 +1,97 @@
+.form-authorization{
+    max-width: 28.5625rem;
+    padding: 5.5rem 5.75rem;
+    filter: drop-shadow(0px 4px 17px rgba(0, 0, 0, 0.17));
+    background: #FFFFFF;
+    border-radius: 30px;
+    
+    &__label{
+        margin-bottom: 2.5rem;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        display: block;
+    }
+
+    &__login{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #403A4B;
+        width: 17.0625rem;
+        padding: 1.1875rem 1.6875rem 0.25rem 0.875rem;
+        background: #F6F7FF;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+    }   
+
+    &__password{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #403A4B;
+        width: 17.0625rem;
+        padding: 1.1875rem 1.6875rem 0.25rem 0.875rem;
+        background: #F6F7FF;
+        border-radius: 7px;
+        border: none;
+        outline: none;
+    }
+
+    &__button-entry{
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+        background: #523BDB;
+        border-radius: 7px;
+        display: block;
+        margin-top: 1.3125rem;
+        width: 17.0625rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+}
+
+.form-authorization-container{
+    display: inline-block;
+    position: relative;
+    &__label{
+        position: absolute;
+        left: 1rem;
+        top: 0.1875rem;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 13px;
+        color: rgba(64, 58, 75, 0.6);
+    }
+    &__icon-login{
+        position: absolute;
+        right: 1rem;
+        top: 0.875rem;
+    }
+    &__icon-eye{
+        cursor: pointer;
+    }
+}
+
+.form-authorization-flex{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5625rem;
+}
+
+.form-authorization-container-button{
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0.9rem;
+    top: 0.8rem;
+}
+
+.button-container-auth{
+    display: flex;
+    justify-content: center;
+}

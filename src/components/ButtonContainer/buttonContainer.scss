@@ -1,5 +1,5 @@
-.button-container{
-    width: 58.9%;
+.task-button-container{
+    width: 65%;
     background-color: #fff;
     border-radius: 20px;
     display: flex;
@@ -7,7 +7,7 @@
     padding: 0.3rem 1rem;
 }
 
-.task-button-container{
+.active-task-button-container{
     display: flex;
     align-items: center;
     gap: 1rem;

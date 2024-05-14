@@ -1,11 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ProgressLine } from '../ProgressLine'
 import './taskSection.scss'
 import { Button } from '../Button';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUpdateActiveTask } from '../../redux/action-creators';
+import { IStoreState } from '../../types';
 
 export const TaskCommand = () => {
     const [number, setNumber] = useState<number | null>(90);
     const [inputValue, setInputValue] = useState<string>('');
+    const taskId = useSelector((state: IStoreState) => state.tasks.task.id)
+    const progress = useSelector((state: IStoreState) => state.tasks.task.progress)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+      setNumber(progress)
+    }, [])
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(event.target.value);
@@ -17,6 +27,19 @@ export const TaskCommand = () => {
         if (!isNaN(newNumber)) {
           setNumber(newNumber);
           setInputValue('');
+          dispatch(getUpdateActiveTask(
+            {
+              id: taskId,
+              updateData: 
+              [
+                {
+                  fieldToUpdate: "progress",
+                  valueToUpdate: newNumber,
+                }
+              ]
+              
+            }
+          ))
         }
       };
 

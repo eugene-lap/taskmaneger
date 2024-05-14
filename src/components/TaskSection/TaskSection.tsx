@@ -16,8 +16,7 @@ export const TaskSection = () => {
             <TaskButtonContainer/>
             {taskActiveStatus === 'description' && <TaskDescription/>}
             {taskActiveStatus === 'command' && <TaskCommand/>}
-            {taskActiveStatus === 'file' && <TaskImagesUploader/>
-            }
+            {taskActiveStatus === 'file' && <TaskImagesUploader/>}
             {taskActiveStatus === 'report' && <TaskReport/>}
         </div>
     )
