@@ -1,10 +1,17 @@
 .personal-area-data {
+  box-sizing: border-box;
   padding: 13px 17px;
   margin-left: 26px;
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 300px;
+  height: 459px;
   border-radius: 10px;
   background-color: #fcfbff;
+}
+
+.ant-select.ant-select-outlined.css-dev-only-do-not-override-1qfezbu.ant-select-single.ant-select-show-arrow {
+  border: 2px solid #ac9ff0;
+  border-radius: 8px;
 }

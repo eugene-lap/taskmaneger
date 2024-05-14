@@ -1,4 +1,5 @@
 .team {
+  box-sizing: border-box;
   border-radius: 10px;
   background: #fcfbff;
   width: 476px;
@@ -17,6 +18,8 @@
   }
 
   &__title {
+    margin: 0;
+    padding-bottom: 10px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 600;
     font-size: 20px;

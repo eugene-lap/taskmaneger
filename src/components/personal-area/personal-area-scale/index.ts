@@ -1,0 +1,1 @@
+export { PersonalAreaScale } from './personal-area-scale'

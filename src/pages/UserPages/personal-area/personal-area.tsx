@@ -1,12 +1,14 @@
-import { AvatarUser } from '../../../components/avatar-user'
-import { PersonalAreaTeam } from '../../../components/personal-area/personal-area-calendar'
-import { PersonalAreaData } from '../../../components/personal-area/personal-area-data'
-import { PersonalAreaPassword } from '../../../components/personal-area/personal-area-edit-password'
-import { PersonalAreaProgress } from '../../../components/personal-area/personal-area-progress'
-import { PersonalAreaTasks } from '../../../components/personal-area/personal-area-tasks'
-import { PersonalAreaCalendar } from '../../../components/personal-area/personal-area-team'
+import { AvatarUser } from '../../../components/avatar-user';
+import { PersonalAreaTeam } from '../../../components/personal-area/personal-area-team';
+import { PersonalAreaData } from '../../../components/personal-area/personal-area-data';
+import { PersonalAreaPassword } from '../../../components/personal-area/personal-area-edit-password';
+import { PersonalAreaProgress } from '../../../components/personal-area/personal-area-progress';
+import { PersonalAreaTasks } from '../../../components/personal-area/personal-area-tasks';
+import { PersonalAreaCalendar } from '../../../components/personal-area/personal-area-calendar';
+
 import { User } from '../../../types'
 import './personal-area.scss'
+import { PersonalAreaAsideCalendar } from '../../../components/personal-area/personal-area-aside-calendar';
 
 export const PersonalArea = () => {
     const user: User = {
@@ -29,11 +31,11 @@ export const PersonalArea = () => {
                     </div>
                     <div className="personal-area-content__footer">
                         <PersonalAreaPassword></PersonalAreaPassword>
-                        {/* //!calendar */}
+                        <PersonalAreaCalendar></PersonalAreaCalendar>
                     </div>
                 </div>
                 <div className="personal-area-aside">
-                    <PersonalAreaCalendar></PersonalAreaCalendar>
+                    <PersonalAreaAsideCalendar></PersonalAreaAsideCalendar>
                     <PersonalAreaTasks></PersonalAreaTasks>
                 </div>
             </div>

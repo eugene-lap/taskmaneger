@@ -1,3 +1,9 @@
+import './personal-area-tasks.scss';
+
 export function PersonalAreaTasks() {
-  return <></>
+  return (
+    <div className="personal-area-tasks">
+
+    </div>
+  )
 }

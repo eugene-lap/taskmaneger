@@ -1,0 +1,16 @@
+.scale {
+  border-radius: 5px;
+  width: 14px;
+  height: 285px;
+  background: #ddd6ed;
+  display: flex;
+  align-items: end;
+
+  .scale__active {
+    border-top: 2.08px solid #fff;
+    border-radius: 5px;
+    width: 14px;
+    //height: 219px;
+    background: #a85cf9;    
+  }
+}

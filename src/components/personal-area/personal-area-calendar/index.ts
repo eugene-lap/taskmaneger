@@ -1,1 +1,1 @@
-export { PersonalAreaTeam } from './personal-area-team'
+export { PersonalAreaCalendar } from './personal-area-calendar';

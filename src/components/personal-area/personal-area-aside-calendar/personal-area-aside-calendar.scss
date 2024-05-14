@@ -1,0 +1,58 @@
+.personal-area-aside-calendar {
+  border-radius: 9px;
+  width: 283px;
+  height: 424px;
+  background: #fff;
+    
+  .calendar__date {    
+    box-sizing: border-box;
+    border-radius: 9px;
+    width: 273px;
+    height: 119px;
+    background: #f1eef6;
+    margin: 5px;
+    padding: 14px;
+
+    h3 {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+      color: #000;
+      padding-bottom: 15px;
+    }
+    .calendar__days {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .calendar__day {
+        border-radius: 5px;
+        width: 28px;
+        height: 47px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+
+        .calendar__day-number {
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-weight: 800;
+          font-size: 15px;
+          letter-spacing: -0.01em;
+          color: #000;
+        }
+        .calendar__day-week {
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-weight: 500;
+          font-size: 11px;
+          color: #757575;
+        }
+
+      }    
+    }
+  }
+
+  
+}

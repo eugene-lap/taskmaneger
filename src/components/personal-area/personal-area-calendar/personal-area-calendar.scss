@@ -1,0 +1,127 @@
+.personal-area-calendar {
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 18px 22px;
+  width: 355px;
+  height: 186px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+  *, *:after, *:before {
+    box-sizing: border-box;
+  }
+    
+  :root {
+    --c-theme-primary: #008FFD;
+    --c-theme-primary-accent: #CBE8FF;
+    --c-bg-primary: #D6DAE0;
+    --c-bg-secondary: #EAEBEC;
+    --c-bg-tertiary: #FDFDFD;
+    --c-text-primary: #1F1F25;
+    --c-text-secondary: #999FA6;
+  }
+  
+  button {
+    font: inherit;
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+    }
+  }
+  
+  .datepicker-top {
+    margin-bottom: 1rem;
+  }
+  
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    margin-top: -.5rem;
+  }
+  
+  .tag {
+    margin-right: .5rem;
+    margin-top: .5rem;
+    border: 0;
+    background-color: var(--c-bg-secondary);
+    border-radius: 10px;
+    padding: .5em .75em;
+    font-weight: 600;
+  }
+  
+  .month-selector {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .arrow {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border: 0;
+    background-color: #c6c0e4;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 2px 0 rgba(#000,.25), 0 0 10px 0 rgba(#000, .15);
+  }
+  
+  .month-name {
+    font-weight: 600;
+  }
+  
+  .datepicker-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-row-gap: 2px;
+  }
+  
+  .day, .date {
+    justify-self: center;
+  }
+  
+  .day {
+    color:  #c2c2c2;
+    font-size: .875em;
+    font-weight: 500;
+    justify-self: center;
+  }
+  
+  .date {
+    border: 0;
+    padding: 0;
+    width: 2.25rem;
+    height: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+      color: var(--c-theme-primary);
+      border: 2px solid var(--c-theme-primary-accent);	
+    }	
+  }
+   
+  .faded {
+    color:  #c2c2c2;
+  }
+  
+  .current-day {
+    color: #FFF;
+    border-color: var(--c-theme-primary);
+    background-color: var(--c-theme-primary);
+    &:focus {
+      background-color: var(--c-theme-primary-accent);
+    }
+  }
+  
+}

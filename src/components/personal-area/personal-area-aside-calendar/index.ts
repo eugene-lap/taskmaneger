@@ -1,0 +1,1 @@
+export { PersonalAreaAsideCalendar } from './personal-area-aside-calendar';

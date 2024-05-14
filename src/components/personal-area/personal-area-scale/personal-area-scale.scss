@@ -1,0 +1,19 @@
+.personal-area-scale {
+ display: flex;
+
+ height: 300px;
+
+  .personal-area-scale__numbers {
+    height: 100%;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .personal-area-scale__scale {
+    height: 100%;
+    margin-left: 30px;
+  }
+}
