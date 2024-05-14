@@ -1,6 +1,31 @@
 .personal-area-tasks {
+  box-sizing: border-box;
   border-radius: 9px;
   width: 283px;
   height: 347px;
   background: #fff;
+  padding: 20px;
+
+  h3 {
+    margin: 0;
+  }
+
+  .task {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+   
+    &__column-title {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      .task__title {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+   
+  }
+ 
 }

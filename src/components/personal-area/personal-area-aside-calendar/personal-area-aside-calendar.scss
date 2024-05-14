@@ -54,5 +54,40 @@
     }
   }
 
-  
+  .events {
+    padding: 30px 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .event {
+      display: flex;
+      gap: 25px;
+
+      &__time {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 500;
+        font-size: 11px;
+        color: #757575;
+        display: flex;
+        align-items: center;
+      }
+      &__title {
+        border: 0.94px solid #eaeaea;
+        width: 199px;
+        height: 0px;
+        margin-top: 5px;
+      }
+      &__active-title {
+        box-sizing: border-box;
+        border: 0.94px solid #eaeaea;
+        border-radius: 9px;
+        width: 188px;
+        height: 62px;
+        padding: 11px 20px;
+        border-left: 7px solid #5534a5;;
+      }
+
+    }
+  }
 }
