@@ -32,9 +32,6 @@ export const Navigation = () => {
                 <div onClick={() => handelNavigate(`taskWindow`)} className= {links === `taskWindow` ? 'navigation-container__activeLink' : "navigation-container__disableLink"}>
                 <TaskLinkIcon stroke= {links === `taskWindow` ? '#ffff' : '#27104E'}/>
                 </div>
-                <div onClick={() => handelNavigate(`chatWindow`)} className={links ===  `chatWindow` ? 'navigation-container__activeLink' : "navigation-container__disableLink"}>
-                <ChatLinkIcon stroke= {links === `chatWindow` ? '#ffff' : '#27104E'}/>
-                </div>
                 <div onClick={() => handelNavigate(`userWindow`)} className={links === `userWindow` ? 'navigation-container__activeLink' : "navigation-container__disableLink"}>
                 <UserLinkIcon stroke= {links === `userWindow` ? '#ffff' : '#27104E'}/>
                 </div>

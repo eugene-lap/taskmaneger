@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { ActiveCardHeader, Button, ProgressLineContainer, TaskSection, UserTabs } from '../../../components'
+import { ActiveCardHeader, Button, ProgressLineContainer, TaskSection, UserTabs, UserTeam } from '../../../components'
 import './userActiveTaskPage.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { getTask} from '../../../redux/action-creators'
@@ -29,9 +29,6 @@ export const UserActiveTaskPage = () => {
                 <div className="user-active-task-page-content-info">
                     <ProgressLineContainer/>
                     <TaskSection/>
-                </div>
-                <div className="user-active-task-page-content-container">
-                    
                 </div>
             </div>
         </div>

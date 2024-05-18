@@ -11,6 +11,7 @@ export const UserTabs = () => {
     const url = useSelector((state: IStoreState) => state.user.userImg?.imgUrl)
     const dispatch = useDispatch()
     useEffect(() => {
+        console.log(user.id)
         dispatch(getUserImgs(user.id))
     },[])
     return (

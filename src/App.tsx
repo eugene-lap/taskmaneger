@@ -9,6 +9,7 @@ import { Authorization } from './components';
 import { AuthPage } from './pages/AuthPage';
 import { AdminMainPage, AdminSettingPage } from './pages/AdminPage';
 import { AdminAddTaskPage } from './pages/AdminPage/AdminAddTaskPage';
+import { SchedulePage } from './pages/SchedulePage';
 
 function App() {
   const links = useSelector((state: IStoreState) => state.ui.linksStatus)
@@ -53,6 +54,12 @@ function App() {
                   path="settingWindow"
                   element={
                     isAuthorized ? <AdminSettingPage/> : <Navigate to="/sign-in" />
+                  }
+                />
+                <Route
+                  path="scheduleWindow"
+                  element={
+                    isAuthorized ? <SchedulePage/> : <Navigate to="/sign-in" />
                   }
                 />
       <Route path="sign-in">
